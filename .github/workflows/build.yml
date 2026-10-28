@@ -22,14 +22,21 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Fix line endings and permissions
+        run: |
+          tr -d '\r' < gradlew > gradlew.tmp && mv gradlew.tmp gradlew
+          chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: |
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: InterLink-v1.0-debug
           path: app/build/outputs/apk/debug/app-debug.apk
