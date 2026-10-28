@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InterLink</string>
+    <string name="tagline">Ride Connected.</string>
+    <string name="tagline_subtitle">Offline Peer-to-Peer Motorcycle Intercom</string>
+
+    <!-- Home Screen -->
+    <string name="btn_create_session">CREATE SESSION (HOST)</string>
+    <string name="btn_join_session">JOIN SESSION (GUEST)</string>
+    <string name="label_network_status">Network Link</string>
+    <string name="label_audio_status">Helmet Audio Device</string>
+    <string name="status_ready_hotspot">Hotspot / Wi-Fi Active</string>
+    <string name="status_no_network">No Wi-Fi / Hotspot Detected</string>
+    <string name="prompt_enable_hotspot">Enable Hotspot in Android Settings</string>
+    <string name="device_internal_speaker">Phone Earpiece / Speaker</string>
+    <string name="device_bluetooth_headset">Bluetooth Helmet Headset</string>
+
+    <!-- Host Pairing Screen -->
+    <string name="title_host_session">Host Intercom Session</string>
+    <string name="host_guidance">1. Share this IP and 6-digit PIN with your riding partner.\n2. Both phones must be on the same local Wi-Fi or mobile hotspot.</string>
+    <string name="label_local_ip">Host IP Address</string>
+    <string name="label_pairing_code">Pairing PIN</string>
+    <string name="status_waiting_for_guest">Waiting for riding partner to connect…</string>
+    <string name="btn_cancel_host">Cancel Session</string>
+
+    <!-- Guest Join Screen -->
+    <string name="title_join_session">Join Intercom Session</string>
+    <string name="guest_guidance">Enter the Host IP and the 6-digit PIN displayed on the host rider\'s screen.</string>
+    <string name="label_host_ip">Host IP Address</string>
+    <string name="hint_host_ip">e.g. 192.168.43.1</string>
+    <string name="hint_pairing_code">6-digit PIN (e.g. 849201)</string>
+    <string name="btn_connect">CONNECT TO RIDER</string>
+    <string name="discovered_hosts_title">Nearby Hosts Detected:</string>
+    <string name="btn_search_hosts">Refresh Nearby Hosts</string>
+
+    <!-- Active Intercom Screen -->
+    <string name="session_active_title">INTERCOM ACTIVE</string>
+    <string name="label_partner">Connected Rider</string>
+    <string name="label_duration">Duration</string>
+    <string name="label_quality">Connection Quality</string>
+    <string name="label_audio_route">Active Audio Route</string>
+    <string name="btn_mic_active">MIC LIVE — TAP TO MUTE</string>
+    <string name="btn_mic_muted">MUTED — TAP TO TALK</string>
+    <string name="btn_end_session">END INTERCOM SESSION</string>
+    <string name="btn_switch_route">Change Audio Route</string>
+
+    <!-- Metrics -->
+    <string name="metric_latency">RTT: %1$d ms</string>
+    <string name="metric_jitter">Jitter: %1$d ms</string>
+    <string name="metric_loss">Loss: %1$.1f%%</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">InterLink Intercom Service</string>
+    <string name="notif_channel_desc">Shows ongoing motorcycle intercom session status</string>
+    <string name="notif_title_active">InterLink Intercom Active</string>
+    <string name="notif_text_connected">Connected to %1$s • Tap to return</string>
+    <string name="notif_action_mute">Mute</string>
+    <string name="notif_action_unmute">Unmute</string>
+    <string name="notif_action_end">End Session</string>
+
+    <!-- Errors & Alerts -->
+    <string name="err_perm_record_audio">Microphone permission is required for voice intercom.</string>
+    <string name="err_perm_bluetooth">Nearby Bluetooth devices permission is needed for helmet headsets.</string>
+    <string name="err_perm_notification">Notification permission is required to run in background with screen off.</string>
+    <string name="err_connection_timeout">Connection to host timed out. Check IP and Wi-Fi connection.</string>
+    <string name="err_auth_failed">Authentication failed: Invalid pairing PIN.</string>
+    <string name="err_session_full">Host already has 2 participants connected.</string>
+    <string name="err_peer_disconnected">Riding partner disconnected. Attempting to reconnect…</string>
+    <string name="err_socket_closed">Intercom connection terminated.</string>
+    <string name="err_audio_init">Failed to initialize audio device or microphone.</string>
+
+    <!-- General -->
+    <string name="status_idle">Idle</string>
+    <string name="status_hosting">Hosting Session…</string>
+    <string name="status_connecting">Connecting to Host…</string>
+    <string name="status_authenticating">Authenticating PIN…</string>
+    <string name="status_connected">Connected (Full Duplex)</string>
+    <string name="status_reconnecting">Reconnecting to Rider…</string>
+    <string name="status_disconnected">Disconnected</string>
+</resources>
+
